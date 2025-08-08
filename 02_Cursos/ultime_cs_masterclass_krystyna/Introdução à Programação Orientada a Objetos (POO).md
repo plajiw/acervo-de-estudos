@@ -1003,7 +1003,11 @@ var p3 = new Pessoa("João", 25);
 
 ### Uso do `this` para Encadeamento de Construtores
 
-Em C#, é possível reduzir duplicação de código usando **chaining** de construtores com o `this`, chamando outro construtor da mesma classe:
+Em C#, é possível reduzir duplicação de código usando **chaining** de construtores com o `this`, chamando outro construtor da mesma classe.
+
+> Chaining ou encadeamento de métodos em C# é uma técnica que permite chamar vários métodos consecutivamente em uma única linha de código. Isso é possível porque cada método retorna o próprio objeto (geralmente usando `return this`), permitindo que outro método seja chamado imediatamente após.
+
+
 
 ```c#
 public class Pessoa
@@ -1047,12 +1051,12 @@ Neste exemplo:
   - Use `this` para evitar duplicação de código.
   - Aplique validações para garantir que o objeto seja criado em um estado válido.
 
-#### Relação com a Palavra-chave this
+#### Relação com a Palavra-chave `this`
 
-Embora o tópico principal não foque na palavra-chave this, vale mencionar que ela desempenha um papel importante na sobrecarga de construtores. Em C#, this pode ser usado para:
+Embora o tópico principal não foque na palavra-chave `this`, vale mencionar que ela desempenha um papel importante na sobrecarga de construtores. Em C#, `this` pode ser usado para:
 
-- **Chamar outro construtor**: Como mostrado no exemplo acima, this permite que um construtor delegue a inicialização para outro construtor da mesma classe.
-- **Referenciar a instância atual**: Fora do contexto de construtores, this refere-se ao objeto atual, útil para diferenciar atributos de parâmetros com nomes iguais. Exemplo:
+- **Chamar outro construtor**: Como mostrado no exemplo acima, `this` permite que um construtor delegue a inicialização para outro construtor da mesma classe.
+- **Referenciar a instância atual**: Fora do contexto de construtores, `this` refere-se ao objeto atual, útil para diferenciar atributos de parâmetros com nomes iguais. Exemplo:
 
 ```c#
 public class Carro {
@@ -1072,11 +1076,11 @@ public class Carro {
 
 ---
 
+## Diferença entre Declarações e Expressão em C#
 
+### O que é uma Declaração?
 
-
-
-
+Uma declaração (statement) é uma unidade de código que executa uma ação ou comando, mas não necessariamente produz um valor. Em C#, as declarações são instruções que alteram o estado do programa, controlam o fluxo de execução ou definem estruturas. Elas formam os blocos de construção fundamentais de um programa, descrevendo "o que fazer" sem, obrigatoriamente, retornar um resultado.
 
 
 
