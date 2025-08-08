@@ -1,6 +1,6 @@
 # Introdução à Programação Orientada a Objetos (POO)
 
-
+---
 
 ## O que é um Paradigma de Programação?
 
@@ -13,7 +13,7 @@ Um **paradigma de programação** é um modelo conceitual que define a abordagem
 
 A **Programação Orientada a Objetos (POO)**, foco deste texto, é amplamente adotada devido à sua capacidade de modelar sistemas complexos de forma modular, reutilizável e intuitiva. Ela é suportada por diversas linguagens modernas e é aplicável a domínios variados, desde desenvolvimento web até sistemas embarcados.
 
-
+---
 
 ## O que é Programação Orientada a Objetos (POO)?
 
@@ -38,11 +38,9 @@ A POO oferece vantagens significativas, amplamente reconhecidas em sistemas de s
 
 **Exemplo Contextual**: Em um sistema de gerenciamento de uma biblioteca, a POO permite criar uma classe `Livro` com atributos como `Titulo` e `Autor` e métodos como `Emprestar` ou `Devolver`. Cada livro específico (ex.: "Dom Quixote") é um objeto criado a partir dessa classe.
 
-
+---
 
 ## Conceitos Fundamentais: Classes e Objetos
-
-
 
 ### O que é uma Classe?
 
@@ -182,11 +180,9 @@ Memória Estática: TotalCarros = 2
 
 **Nota Técnica**: Em C#, o **Garbage Collector** gerencia a liberação de memória no heap, enquanto em C++ o programador deve liberar explicitamente objetos alocados com `new` usando `delete`.
 
-
+---
 
 ## Abstração: Modelando o Essencial
-
-
 
 ### O que é Abstração?
 
@@ -238,11 +234,9 @@ aluno.ExibirDados(); // Saída: Aluno: Maria, Matrícula: 12345
 
 A abstração é o princípio que guia a criação de classes, definindo quais atributos e métodos são relevantes para representar uma entidade. Quando instanciamos objetos a partir de uma classe, concretizamos essa abstração, atribuindo valores específicos aos atributos e utilizando os métodos. A abstração, portanto, é o fundamento para projetar classes que sejam claras, focadas e reutilizáveis, preparando o terreno para a inicialização de objetos com construtores.
 
-
+---
 
 ## Construtores: Inicializando Objetos
-
-
 
 ### O que é um Construtor?
 
@@ -373,11 +367,9 @@ public class Carro {
 
 Aqui, o construtor valida o estado inicial, garantindo que o objeto respeite a abstração de um carro válido.
 
-
+---
 
 ## Modificadores de Acesso (Especificadores de Acesso)
-
-
 
 ### O que são Modificadores de Acesso?
 
@@ -425,11 +417,9 @@ meuCarro.Acelerar(); // OK, Acelerar é public
 
 Modificadores de acesso são universais em POO, pois permitem que os desenvolvedores controlem a **interface pública** de uma classe (o que é visível externamente) e protejam a **implementação interna** (detalhes que devem permanecer ocultos). Isso é crucial para a **ocultação de dados**, que veremos a seguir, e para garantir que os objetos mantenham estados consistentes.
 
-
+---
 
 ## Encapsulamento
-
-
 
 ### O que é Encapsulamento?
 
@@ -540,9 +530,9 @@ Console.WriteLine(conta.ExibirSaldo()); // Saída: Titular: Ana, Saldo: R$ 1.300
 
 **Explicação**:
 
-- _saldo e _titular são privados, protegendo o estado da conta.
-- Métodos como Depositar e Sacar controlam as alterações no _saldo, aplicando validações.
-- A propriedade Saldo permite leitura, mas não escrita direta, reforçando a segurança.
+- `_saldo` e `_titular` são privados, protegendo o estado da conta.
+- Métodos como `Depositar` e `Sacar` controlam as alterações no `_saldo`, aplicando validações.
+- A propriedade `Saldo` permite leitura, mas não escrita direta, reforçando a segurança.
 
 
 
@@ -551,20 +541,16 @@ Console.WriteLine(conta.ExibirSaldo()); // Saída: Titular: Ana, Saldo: R$ 1.300
 O encapsulamento é essencial em POO porque:
 
 - **Protege a integridade**: Evita que dados sejam modificados de forma inconsistente.
-- **Facilita manutenção**: Alterações na implementação interna (ex.: mudar a lógica de Sacar) não afetam o código externo.
+- **Facilita manutenção**: Alterações na implementação interna (ex.: mudar a lógica de `Sacar`) não afetam o código externo.
 - **Promove modularidade**: A classe é uma unidade autônoma, com uma interface clara para interação.
 
-------
-
-
+---
 
 ## Ocultação de Dados
 
-
-
 ### O que é Ocultação de Dados?
 
-**Ocultação de dados** (ou *data hiding*) é a prática de restringir o acesso direto aos atributos de uma classe, tornando-os **privados** (ou, em alguns casos, protegidos) e permitindo que sejam manipulados apenas por métodos ou propriedades públicas. É um aspecto específico do encapsulamento, focado em proteger os dados internos de modificações indevidas ou acesso não autorizado.
+**Ocultação de dados** (ou *data hiding*) é a prática de restringir o acesso direto aos atributos de uma classe, tornando-os privados (ou, em alguns casos, protegidos) e permitindo que sejam manipulados apenas por métodos ou propriedades públicas. É um aspecto específico do encapsulamento, focado em proteger os dados internos de modificações indevidas ou acesso não autorizado.
 
 **Definição Formal**: Ocultação de dados é o uso de modificadores de acesso (como private) para impedir que os atributos de uma classe sejam acessados diretamente, expondo apenas métodos ou propriedades que controlam esse acesso.
 
@@ -635,7 +621,7 @@ Aqui, _saldo é privado, garantindo que não seja definido como negativo diretam
 
 ## Relação entre Encapsulamento e Ocultação de Dados
 
-### 4.1. Diferença e Complementaridade
+### Diferença e Complementaridade
 
 Embora **encapsulamento** e **ocultação de dados** sejam conceitos relacionados, eles não são idênticos:
 
@@ -675,10 +661,10 @@ Console.WriteLine(relogio.ObterHora()); // Saída: 14:30
 
 **Análise**:
 
-- **Encapsulamento**: A classe Relogio agrupa _horas, _minutos e os métodos AjustarHora e ObterHora, formando uma unidade coesa.
-- **Ocultação de dados**: _horas e _minutos são privados, garantindo que só possam ser alterados via AjustarHora, que inclui validações.
+- **Encapsulamento**: A classe `Relogio` agrupa `_horas`, `_minutos` e os métodos `AjustarHora` e `ObterHora`, formando uma unidade coesa.
+- **Ocultação de dados**: `_horas` e `_minutos` são privados, garantindo que só possam ser alterados via `AjustarHora`, que inclui validações.
 
-**Cenário sem Encapsulamento**: Se os métodos AjustarHora e ObterHora fossem definidos fora da classe Relogio, os atributos _horas e _minutos precisariam ser públicos para serem acessados, comprometendo a ocultação de dados. Isso mostra como o encapsulamento é um pré-requisito para a ocultação de dados eficaz.
+**Cenário sem Encapsulamento**: Se os métodos `AjustarHora` e `ObterHora` fossem definidos fora da classe `Relogio`, os atributos `_horas` e `_minutos` precisariam ser públicos para serem acessados, comprometendo a ocultação de dados. Isso mostra como o encapsulamento é um pré-requisito para a ocultação de dados eficaz.
 
 
 
@@ -766,21 +752,367 @@ Console.WriteLine(func.ExibirInformacoes()); // Saída: Funcionário: Ana, ID: E
 - **Ocultação de dados**: Atributos são privados, acessíveis apenas via propriedades ou métodos com validações.
 - **Benefícios**: O salário não pode ser definido como negativo, e o ID é imutável após a criação, garantindo integridade.
 
-
+---
 
 ## Sobrecarga de Métodos
 
-Assinatura de método
+Sobrecarga de métodos (ou *method overloading*) é uma característica da Programação Orientada a Objetos (POO) que permite a definição de múltiplos métodos com o mesmo nome dentro da mesma classe, desde que possuam assinaturas diferentes. A assinatura de um método é composta pelo nome do método e pela lista de parâmetros (incluindo o número, tipo e ordem dos parâmetros). O compilador diferencia os métodos sobrecarregados com base nessas assinaturas, permitindo que o mesmo nome de método seja reutilizado para realizar operações relacionadas, mas com diferentes combinações de argumentos.
+
+Em C#, a assinatura de um método é composta pelo seu nome e pela lista ordenada de tipos e número de parâmetros formais”. O tipo de retorno não faz parte da assinatura para fins de sobrecarga.
 
 
+
+### Assinatura de Método
+
+A assinatura de um método em linguagens como C#, Java e C++ é definida pelos seguintes elementos:
+
+- **Nome do método**: O identificador do método.
+- **Número de parâmetros**: Quantidade de argumentos que o método aceita.
+- **Tipos dos parâmetros**: O tipo de dado de cada parâmetro.
+- **Ordem dos parâmetros**: A sequência em que os parâmetros são declarados.
+- **Modificadores de parâmetro**: Modificadores como  `ref`, `out` e  `in`.
+
+Elementos que **NÃO** fazem parte da assinatura:
+
+- **Tipo de retorno**: Em C#, o tipo de retorno não é considerado na diferenciação de métodos sobrecarregados.
+- **Modificadores de acesso** (e.g., `public`, `private`): Não influenciam a assinatura.
+- **Nomes dos parâmetros**: Apenas os tipos e a ordem importam, não os nomes.
+
+Exemplo em C#:
+
+```c#
+public class Calculadora {
+    // Método 1: Soma de dois inteiros
+    public int Somar(int a, int b) {
+        return a + b;
+    }
+
+    // Método 2: Soma de três inteiros
+    public int Somar(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Método 3: Soma de dois doubles
+    public double Somar(double a, double b) {
+        return a + b;
+    }
+}
+```
+
+**Análise**:
+
+- Os três métodos têm o mesmo nome (`Somar`), mas assinaturas diferentes:
+  - Somar(`int`, `int`): Dois parâmetros inteiros.
+  - Somar(`int`, `int`, `int`): Três parâmetros inteiros.
+  - Somar(`double`, `double`): Dois parâmetros do tipo `double`.
+- O compilador escolhe o método correto com base nos argumentos fornecidos na chamada.
+
+Exemplo em C#:
+
+```c#
+Calculadora calc = new Calculadora();
+Console.WriteLine(calc.Somar(2, 3));        // Saída: 5 (chama Somar(int, int))
+Console.WriteLine(calc.Somar(2, 3, 4));     // Saída: 9 (chama Somar(int, int, int))
+Console.WriteLine(calc.Somar(2.5, 3.7));    // Saída: 6.2 (chama Somar(double, double))
+```
+
+
+
+### Regras para Sobrecarga de Métodos
+
+* **Nome igual**: Todos os métodos sobrecarregados devem compartilhar o mesmo nome.
+
+* **Assinatura única**: Cada método deve ter uma lista de parâmetros distinta (número, tipo ou ordem).
+
+* **Resolução em tempo de compilação**: O compilador determina qual método chamar com base nos argumentos fornecidos, um processo chamado *resolução estática*.
+
+* **Independência do tipo de retorno**: Em C#, o tipo de retorno não pode ser usado para diferenciar métodos. Por exemplo, o seguinte código gera um erro de compilação:
+
+```c#
+public class Exemplo {
+    public int Metodo(int x) { return x; }
+    public double Metodo(int x) { return x; } // ERRO: Assinaturas idênticas
+}
+```
+
+* **Modificadores de acesso irrelevantes**: Métodos sobrecarregados podem ter diferentes modificadores de acesso (`public`, `private`, etc.), mas isso não afeta a resolução da sobrecarga.
+
+
+
+### Limitações e Cuidados
+
+* **Ambiguidade**: Se os argumentos fornecidos não permitem ao compilador distinguir claramente qual método chamar, ocorre um erro de compilação. Exemplo:
+
+```c#
+public class Exemplo {
+    public void Processar(int x, double y) { }
+    public void Processar(double x, int y) { }
+}
+Exemplo ex = new Exemplo();
+ex.Processar(1, 2); // ERRO: Chamada ambígua
+```
+
+Nesse caso, o compilador não sabe qual método escolher, pois os argumentos podem ser convertidos implicitamente para ambos os tipos.
+
+* **Complexidade**: Sobrecarga excessiva pode dificultar a manutenção e a compreensão do código, especialmente se muitos métodos sobrecarregados tiverem lógica semelhante.
+
+* **Boas práticas**: Use nomes claros e mantenha a lógica dos métodos sobrecarregados consistente com o propósito do nome do método. Evite sobrecargas que possam causar confusão.
+
+### Referências
+
+[Métodos - C# | Microsoft Learn](https://learn.microsoft.com/pt-br/dotnet/csharp/programming-guide/classes-and-structs/methods)
+
+---
 
 ## Sobrecarga de Construtores
 
-this para “vincular” construtores 
+Sobrecarga de construtores é uma aplicação específica da sobrecarga de métodos, onde uma classe define múltiplos construtores com **diferentes listas de parâmetros**. Cada construtor permite inicializar objetos de maneiras diferentes, oferecendo flexibilidade na criação de instâncias com base nos dados disponíveis ou no contexto.
 
-são distinguidos pela passagem de argumentos / parâmetros
+**Definição Formal**: Um construtor é um método especial que inicializa objetos de uma classe. A sobrecarga de construtores permite que a classe forneça várias formas de criar objetos, distinguindo-as pela assinatura (número, tipo e ordem dos parâmetros). Como descrito por Deitel & Deitel (2017), a sobrecarga de construtores facilita a inicialização de objetos com diferentes combinações de valores iniciais, mantendo a consistência do estado do objeto.
 
-o this refere-se ao construtor da própria classe, ou a instância atual
+
+
+### Características da Sobrecarga de Construtores
+
+- **Nome do construtor**: Igual ao nome da classe.
+- **Sem tipo de retorno**: Construtores não retornam valores, nem mesmo void.
+- **Diferenciação por parâmetros**: Os construtores são distinguidos pelo número, tipo ou ordem dos parâmetros.
+- **Resolução estática**: Assim como na sobrecarga de métodos, o compilador seleciona o construtor apropriado com base nos argumentos fornecidos na chamada com o operador new.
+
+
+
+Exemplo em C#:
+
+```c#
+public class Carro {
+    private string _modelo;
+    private int _ano;
+    private bool _ligado;
+
+    // Construtor padrão (sem parâmetros)
+    public Carro() {
+        _modelo = "Desconhecido";
+        _ano = 2023;
+        _ligado = false;
+    }
+
+    // Construtor com modelo
+    public Carro(string modelo) {
+        _modelo = modelo;
+        _ano = 2023;
+        _ligado = false;
+    }
+
+    // Construtor com modelo e ano
+    public Carro(string modelo, int ano) {
+        _modelo = modelo;
+        _ano = ano >= 1900 ? ano : throw new ArgumentException("Ano inválido");
+        _ligado = false;
+    }
+
+    // Construtor completo
+    public Carro(string modelo, int ano, bool ligado) {
+        _modelo = modelo;
+        _ano = ano >= 1900 ? ano : throw new ArgumentException("Ano inválido");
+        _ligado = ligado;
+    }
+
+    public void ExibirInformacoes() {
+        Console.WriteLine($"Carro: {_modelo}, Ano: {_ano}, Ligado: {_ligado}");
+    }
+}
+```
+
+Uso Prático:
+
+```c#
+Carro carro1 = new Carro();                     // Usa o construtor padrão
+carro1.ExibirInformacoes();                     // Saída: Carro: Desconhecido, Ano: 2023, Ligado: False
+
+Carro carro2 = new Carro("Fusca");              // Usa o construtor com modelo
+carro2.ExibirInformacoes();                     // Saída: Carro: Fusca, Ano: 2023, Ligado: False
+
+Carro carro3 = new Carro("Civic", 2020);        // Usa o construtor com modelo e ano
+carro3.ExibirInformacoes();                     // Saída: Carro: Civic, Ano: 2020, Ligado: False
+
+Carro carro4 = new Carro("Mustang", 2022, true); // Usa o construtor completo
+carro4.ExibirInformacoes();                     // Saída: Carro: Mustang, Ano: 2022, Ligado: True
+```
+
+### Regras para Sobrecarga de Construtores
+
+1. **Assinatura única**: Cada construtor deve ter uma lista de parâmetros distinta (número, tipo ou ordem).
+2. **Validações**: Construtores devem garantir que o objeto seja inicializado em um estado válido, aplicando validações quando necessário.
+3. **Uso do `this` para vincular construtores**: Em C#, a palavra-chave `this` pode ser usada para chamar outro construtor da mesma classe, evitando duplicação de código. Exemplo:
+
+```c#
+public class Carro {
+    private string _modelo;
+    private int _ano;
+
+    public Carro() : this("Desconhecido", 2023) { } // Chama o construtor com parâmetros
+
+    public Carro(string modelo, int ano) {
+        _modelo = modelo;
+        _ano = ano >= 1900 ? ano : throw new ArgumentException("Ano inválido");
+    }
+}
+```
+
+4. Aqui, o construtor padrão delega a inicialização para o construtor parametrizado, usando `: this()`.
+
+5. **Construtor padrão implícito**: Se nenhum construtor for definido, o compilador fornece um construtor padrão sem parâmetros. Porém, se qualquer construtor for definido explicitamente, o construtor padrão implícito não é gerado.
+
+
+
+Exemplo em C#:
+
+```c#
+public class Pessoa
+{
+    public string Nome { get; }
+    public int Idade { get; }
+
+    // Construtor sem parâmetros (valores padrão)
+    public Pessoa()
+    {
+        Nome = "Sem Nome";
+        Idade = 0;
+    }
+
+    // Construtor com nome
+    public Pessoa(string nome)
+    {
+        Nome = nome;
+        Idade = 0;
+    }
+
+    // Construtor com nome e idade
+    public Pessoa(string nome, int idade)
+    {
+        Nome = nome;
+        Idade = idade;
+    }
+}
+
+// Uso:
+var p1 = new Pessoa();
+var p2 = new Pessoa("Maria");
+var p3 = new Pessoa("João", 25);
+```
+
+### Uso do `this` para Encadeamento de Construtores
+
+Em C#, é possível reduzir duplicação de código usando **chaining** de construtores com o `this`, chamando outro construtor da mesma classe:
+
+```c#
+public class Pessoa
+{
+    public string Nome { get; }
+    public int Idade { get; }
+
+    public Pessoa() : this("Sem Nome", 0) { }
+
+    public Pessoa(string nome) : this(nome, 0) { }
+
+    public Pessoa(string nome, int idade)
+    {
+        Nome = nome;
+        Idade = idade;
+    }
+}
+```
+
+Neste exemplo:
+
+- O construtor sem parâmetros chama o construtor com `(string, int)`.
+- O construtor com apenas `string` também chama o `(string, int)`.
+- Isso centraliza a lógica de inicialização no construtor mais completo.
+
+
+
+#### Benefícios da Sobrecarga de Construtores
+
+- **Flexibilidade na inicialização**: Permite criar objetos com diferentes combinações de dados iniciais.
+- **Reutilização de código**: Usando this para vincular construtores, evita-se duplicação de lógica de inicialização.
+- **Clareza**: Oferece opções claras para instanciar objetos, dependendo do contexto.
+- **Robustez**: Permite validações específicas para cada combinação de parâmetros, garantindo estados consistentes.
+
+#### Limitações e Cuidados
+
+- **Ambiguidade**: Assim como na sobrecarga de métodos, construtores com assinaturas ambíguas (e.g., parâmetros que podem ser implicitamente convertidos) causam erros de compilação.
+- **Manutenção**: Muitos construtores podem dificultar a manutenção, especialmente se a lógica de inicialização for complexa.
+- Boas práticas:
+  - Mantenha a lógica dos construtores simples e focada na inicialização.
+  - Use `this` para evitar duplicação de código.
+  - Aplique validações para garantir que o objeto seja criado em um estado válido.
+
+#### Relação com a Palavra-chave this
+
+Embora o tópico principal não foque na palavra-chave this, vale mencionar que ela desempenha um papel importante na sobrecarga de construtores. Em C#, this pode ser usado para:
+
+- **Chamar outro construtor**: Como mostrado no exemplo acima, this permite que um construtor delegue a inicialização para outro construtor da mesma classe.
+- **Referenciar a instância atual**: Fora do contexto de construtores, this refere-se ao objeto atual, útil para diferenciar atributos de parâmetros com nomes iguais. Exemplo:
+
+```c#
+public class Carro {
+    private string _modelo;
+
+    public Carro(string modelo) {
+        this._modelo = modelo; // this diferencia o atributo do parâmetro
+    }
+}
+```
+
+
+
+### Referências
+
+[Constructors - C# | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Diferença de Declaração e Expressão
 
@@ -823,3 +1155,19 @@ Em vez disso, descartaremos os colchetes e a palavra-chave "return" e usaremos s
 ## Palavra `this`
 
 refere à instância atual da classe.
+
+## Reandonly e Const
+
+Tornar todos os campos de um objeto readonly torna o objeto inteiro imutável.
+
+Imutabilidade significa que, depois que um objeto é criado, ele nunca será modificado.
+
+[5 Benefits of Immutable Objects Worth Considering for Your Next Project | HackerNoon](https://hackernoon.com/5-benefits-of-immutable-objects-worth-considering-for-your-next-project-f98e7e85b6ac)
+
+O modificador const pode ser aplicado a variáveis e campos.
+
+Essas variáveis e campos devem ser atribuídos na declaração e nunca podem ser modificados posteriormente.
+
+Além disso, eles devem receber um valor constante de tempo de compilação, ou seja, um valor que possa ser avaliado durante
+
+a compilação antes de o aplicativo ser executado.
